@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="HUSTLEVERSE — meet the people building what comes next.">
+  <title>HUSTLEVERSE — Find your people</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="HUSTLEVERSE home"><span class="brand-mark">H</span> HUSTLE<span class="brand-light">VERSE</span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#discover">Discover</a><a href="#about">About</a></nav>
+    <div class="nav-actions"><button class="button button-quiet" id="login-button">Log in</button><button class="button button-primary" id="signup-button">Join the verse <span aria-hidden="true">↗</span></button><button class="avatar-button hidden" id="account-button" aria-label="Open your profile"></button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>Big ideas need<br>their <span>people.</span></h1>
+        <p class="hero-description">A home for ambitious minds, independent makers, and people building a life on their own terms.</p>
+        <div class="hero-actions"><a class="button button-primary button-large" href="#discover">Meet your people <span aria-hidden="true">↓</span></a><button class="text-button" id="hero-join">Create your profile <span aria-hidden="true">↗</span></button></div>
+        <div class="social-proof"><div class="proof-avatars"><span>J</span><span>M</span><span>A</span><span>+</span></div><p><strong id="member-count">A growing community</strong><br>Good things happen together.</p></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract illustration of creative community">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+        <div class="art-center"><span>H</span><small>BUILD<br>YOUR<br>WORLD</small></div>
+        <div class="float-card float-card-one"><span class="mini-icon">✳</span><span><b>Ideas in motion</b><small>Make it happen</small></span></div>
+        <div class="float-card float-card-two"><span class="mini-face">↗</span><span><b>Find your next</b><small>collaborator</small></span></div>
+        <span class="spark spark-one">✳</span><span class="spark spark-two">✦</span>
+      </div>
+      <div class="hero-bottom"><span>01 / COMMUNITY</span><span>CREATORS · FOUNDERS · DOERS</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="discover section-wrap" id="discover">
+      <div class="section-heading"><div><p class="eyebrow">THE PEOPLE ARE THE POINT</p><h2>Find your <span>frequency.</span></h2></div><p class="section-intro">Meet the minds, makers, and movers making things happen. Your next great connection could be one profile away.</p></div>
+      <div class="directory-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search people, names, or websites..." aria-label="Search profiles"></label><span class="directory-note" id="directory-status">A few good humans to meet</span></div>
+      <div class="profile-grid" id="profile-grid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="empty-state"><span>✳</span><h3>No matches just yet.</h3><p>Try another search, or be the first to join.</p></div>
+      <div class="join-banner"><div><p class="eyebrow">YOUR PEOPLE ARE OUT THERE</p><h3>Make yourself known.</h3><p>Bring your ambition. Find your community.</p></div><button class="button button-dark" id="banner-join">Create your profile <span aria-hidden="true">↗</span></button></div>
+    </section>
+
+    <section class="manifesto" id="about"><div class="manifesto-mark">✳</div><p class="eyebrow">A LITTLE LESS SCROLLING. A LOT MORE BUILDING.</p><h2>We believe your network<br>should feel like <span>your people.</span></h2><p class="manifesto-copy">HUSTLEVERSE is a simple place to show up as yourself, share what you're working on, and discover the people who just get it.</p><button class="text-button" id="manifesto-join">Find your place <span aria-hidden="true">↗</span></button></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">H</span> HUSTLE<span class="brand-light">VERSE</span></a><span>Made for people going somewhere.</span><a href="#home">Back to top ↑</a></footer>
+
+  <dialog class="auth-dialog" id="auth-dialog"><button class="dialog-close" id="close-dialog" aria-label="Close">×</button><div class="dialog-mark">H</div><p class="eyebrow" id="dialog-eyebrow">WELCOME TO THE VERSE</p><h2 id="dialog-title">Make your move.</h2><p class="dialog-copy" id="dialog-copy">Create an account to introduce yourself to the community.</p><form id="auth-form"><label class="form-label">Email<input type="email" id="auth-email" placeholder="you@example.com" autocomplete="email" required></label><label class="form-label">Password<input type="password" id="auth-password" placeholder="At least 6 characters" minlength="6" autocomplete="current-password" required></label><button class="button button-primary button-full" id="auth-submit" type="submit">Join HUSTLEVERSE <span>↗</span></button></form><p class="form-message" id="form-message" role="status"></p><p class="switch-auth" id="auth-switch">Already have an account? <button type="button" id="switch-mode">Log in</button></p></dialog>
+
+  <dialog class="profile-dialog" id="profile-dialog"><button class="dialog-close" id="close-profile" aria-label="Close">×</button><div class="dialog-mark">✳</div><p class="eyebrow">YOUR CORNER OF THE VERSE</p><h2>Make it yours.</h2><p class="dialog-copy">A little about you helps the right people find you.</p><form id="profile-form"><label class="form-label">Username<input type="text" id="profile-username" maxlength="30" placeholder="yourname"></label><label class="form-label">Full name<input type="text" id="profile-name" maxlength="80" placeholder="Your name"></label><label class="form-label">Avatar image URL<input type="url" id="profile-avatar" placeholder="https://..."></label><label class="form-label">Website<input type="url" id="profile-website" placeholder="https://yourwebsite.com"></label><button class="button button-primary button-full" type="submit">Save profile <span>↗</span></button></form><p class="form-message" id="profile-message" role="status"></p><button class="logout-button" id="logout-button">Log out</button></dialog>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
